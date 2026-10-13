@@ -1,0 +1,31 @@
+{
+  "name": "locorent",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --experimental-strip-types --test tests/domain.test.ts tests/payments.test.ts tests/database.test.mjs tests/booking-access.test.ts tests/demo.test.ts",
+    "check:edge": "deno check --config supabase/functions/deno.json supabase/functions/locorent-api/index.ts supabase/functions/payment-webhook/index.ts supabase/functions/locorent-demo/index.ts"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.117.3",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^0.468.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.8",
+    "@types/leaflet": "^1.9.15",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "deno": "2.9.6",
+    "supabase": "2.120.0",
+    "typescript": "~5.7.2",
+    "vite": "^6.0.5"
+  }
+}

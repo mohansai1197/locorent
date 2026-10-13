@@ -1,0 +1,27 @@
+# Runtime configuration and credentials
+.env*
+**/.env*
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+auth.json
+.openai/
+.vercel/
+.sites-runtime/
+supabase/project.json
+supabase/.temp/
+supabase/.branches/
+# Generated files and local data
+node_modules
+**/node_modules
+dist/
+build/
+coverage/
+*.tsbuildinfo
+*.log
+.DS_Store
+backups/
+exports/
+*dump*.sql
